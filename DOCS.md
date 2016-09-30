@@ -2,6 +2,13 @@
 
 
 
+- [Article](#article)
+	- [Create article](#create-article)
+	- [Delete article](#delete-article)
+	- [Retrieve article](#retrieve-article)
+	- [Retrieve articles](#retrieve-articles)
+	- [Update article](#update-article)
+	
 - [Auth](#auth)
 	- [Authenticate](#authenticate)
 	- [Authenticate with Facebook](#authenticate-with-facebook)
@@ -16,6 +23,75 @@
 	- [Update user](#update-user)
 	
 
+
+# Article
+
+## Create article
+
+
+
+	POST /articles
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| access_token			| String			|  <p>user access token.</p>							|
+| title			| 			|  <p>Article's title.</p>							|
+| content			| 			|  <p>Article's content.</p>							|
+
+## Delete article
+
+
+
+	DELETE /articles/:id
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| access_token			| String			|  <p>user access token.</p>							|
+
+## Retrieve article
+
+
+
+	GET /articles/:id
+
+
+## Retrieve articles
+
+
+
+	GET /articles
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| q			| String			| **optional** <p>Query to search.</p>							|
+| page			| Number			| **optional** <p>Page number.</p>							|
+| limit			| Number			| **optional** <p>Amount of returned items.</p>							|
+| sort			| String[]			| **optional** <p>Order of returned items.</p>							|
+| fields			| String[]			| **optional** <p>Fields to be returned.</p>							|
+
+## Update article
+
+
+
+	PUT /articles/:id
+
+
+### Parameters
+
+| Name    | Type      | Description                          |
+|---------|-----------|--------------------------------------|
+| access_token			| String			|  <p>user access token.</p>							|
+| title			| 			|  <p>Article's title.</p>							|
+| content			| 			|  <p>Article's content.</p>							|
 
 # Auth
 
